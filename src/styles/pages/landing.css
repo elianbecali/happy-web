@@ -79,3 +79,53 @@
 .content-wrapper .enter-app:hover {
   background: #96FEFF;
 }
+
+@media (max-width: 990px) {
+  #page-landing .content-wrapper {
+    background-size: 450px;
+  }
+}
+
+@media (max-width: 880px) {
+  #page-landing .content-wrapper {
+    background-size: 300px;
+  }
+}
+
+@media (max-width: 720px) {
+  #page-landing .content-wrapper {
+    width: 96%;
+    height: 96%;
+    
+    background-position-x: 96%;
+  }
+
+  .content-wrapper img {
+    width: 180px;
+  }
+
+  #page-landing .content-wrapper main h1 {
+    font-size: 70px;
+    line-height: 64px;
+  }
+
+  #page-landing .content-wrapper main p {
+    margin-top: 70px;
+    font-size: 22px;
+    line-height: 30px;
+    
+    max-width: 250px;
+  }
+
+  .content-wrapper .enter-app {  
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  #page-landing .content-wrapper {
+    background: none;
+  }
+}
