@@ -13,6 +13,7 @@ import '../styles/pages/orphanage.css';
 interface Orphanage {
   name: string;
   about: string;
+  phone: string;
   instructions: string;
   onpening_hours: string;
   open_on_weekends: string;
@@ -30,7 +31,7 @@ interface OrphanageParams {
 export default function Orphanage() {
   const params = useParams<OrphanageParams>();
   const [orphanage, setOrphanage] = useState<Orphanage>({
-    name: '', about: '', instructions: '', onpening_hours: '',
+    name: '', about: '', phone: '', instructions: '', onpening_hours: '',
     open_on_weekends: '', latitude: 0, longitude: 0, images: [{ url: '' }],
   });
 
@@ -119,10 +120,15 @@ export default function Orphanage() {
               ) }
             </div>
 
-            <button type="button" className="contact-button">
+            <a 
+              target="_blank"
+              rel="noopener noreferrer"
+              href={`https://api.whatsapp.com/send?phone=55${orphanage.phone}`}
+              className="contact-button"
+            >
               <FaWhatsapp size={20} color="#FFF" />
               Entrar em contato
-            </button>
+            </a>
           </div>
         </div>
       </main>

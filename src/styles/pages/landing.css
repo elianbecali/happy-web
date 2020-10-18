@@ -1,11 +1,17 @@
 #page-landing {
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(329.54deg, #29B6D1 0%, #00C7C7 100%);
+  background: var(--color-primary);
 
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#page-landing .themeSwitcher {
+  position: absolute;
+  top: 10px;
+  left: 50%;
 }
 
 #page-landing .content-wrapper {

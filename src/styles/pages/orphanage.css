@@ -11,8 +11,8 @@
   width: 700px;
   margin: 64px auto;
 
-  background: #FFFFFF;
-  border: 1px solid #D3E2E5;
+  background: var(--color-card-background);
+  border: 1px solid var(--color-card-border);
   border-radius: 20px;
 
   overflow: hidden;
@@ -60,7 +60,7 @@
 }
 
 .orphanage-details .orphanage-details-content h1 {
-  color: #4D6F80;
+  color: var(--color-card-content);
   font-size: 54px;
   line-height: 54px;
   margin-bottom: 8px;
@@ -68,13 +68,13 @@
 
 .orphanage-details .orphanage-details-content p {
   line-height: 28px;
-  color: #5C8599;
+  color: var(--color-card-content);
   margin-top: 24px;
 }
 
 .orphanage-details .orphanage-details-content .map-container {
   margin-top: 64px;
-  background: #E6F7FB;
+  background: var(--color-map-container);
   border: 1px solid #B3DAE2;
   border-radius: 20px;
 }
@@ -106,7 +106,7 @@
 .orphanage-details .orphanage-details-content h2 {
   font-size: 36px;
   line-height: 46px;
-  color: #4D6F80;
+  color: var(--color-card-content);
 }
 
 .orphanage-details .orphanage-details-content .open-details {
@@ -129,24 +129,24 @@
 }
 
 .orphanage-details .orphanage-details-content .open-details div.hour {
-  background: linear-gradient(149.97deg, #E6F7FB 8.13%, #FFFFFF 92.67%);
-  border: 1px solid #B3DAE2;
-  color: #5C8599;
+  background: var(--color-card-hour);
+  border: 1px solid var(--color-card-border);
+  color: var(--color-card-content);
 }
 
 .orphanage-details .orphanage-details-content .open-details div.open-on-weekends {
-  background: linear-gradient(154.16deg, #EDFFF6 7.85%, #FFFFFF 91.03%);
-  border: 1px solid #A1E9C5;
-  color: #37C77F;
+  background: var(--color-card-background-weekends);
+  border: 1px solid var(--color-card-border-weekends);
+  color: var(--color-card-weekends);
 }
 
 .orphanage-details .orphanage-details-content .open-details div.open-on-weekends.dont-open {
-  background: linear-gradient(154.16deg, #FDF0F5 7.85%, #FFFFFF 91.03%);
-  border: 1px solid #FFBCD4;
-  color: #FF669D;
+  background: var(--color-card-background-weekends-dont-open);
+  border: 1px solid var(--color-card-border-weekends-dont-open);
+  color: var(--color-card-weekends-dont-open);
 }
 
-.orphanage-details .orphanage-details-content button.contact-button {
+.orphanage-details .orphanage-details-content a.contact-button {
   margin-top: 64px;
 
   width: 100%;
@@ -157,6 +157,7 @@
   border-radius: 20px;
   color: #FFFFFF;
   font-weight: 800;
+  text-decoration: none;
 
   display: flex;
   justify-content: center;

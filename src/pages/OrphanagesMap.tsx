@@ -8,6 +8,7 @@ import mapIcon from '../utils/mapIcon';
 import mapMarkerImg from '../images/map-marker.svg';
 import '../styles/pages/orphanages-map.css';
 import api from '../services/api';
+import ToggleDarkMode from '../components/ToggleDarkMode';
 
 interface Orphanage {
   id: number;
@@ -34,6 +35,8 @@ function OrphanagesMap() {
           <h2>Escolha um orfanato no mapa</h2>
           <p>Muitas crianças estão esperando a sua visita :)</p>
         </header>
+
+        <ToggleDarkMode />
 
         <footer>
           <strong>Cacoal</strong>

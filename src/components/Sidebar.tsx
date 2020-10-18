@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom';
 
 import mapMarkerImg from '../images/map-marker.svg';
 import '../styles/components/sidebar.css';
+import ToggleDarkMode from './ToggleDarkMode';
 
 export default function Sidebar() {
   const { goBack } = useHistory();
@@ -11,6 +12,8 @@ export default function Sidebar() {
   return (
     <aside className="app-sidebar">
       <img src={mapMarkerImg} alt="Happy" />
+
+      <ToggleDarkMode />
 
       <footer>
           <button type="button" onClick={goBack}>

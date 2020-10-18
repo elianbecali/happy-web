@@ -6,9 +6,56 @@
 
 body {
   color: #FFF;
-  background: #EBF2F5;
+  background: var(--color-default-background);
 }
 
 body, input, button, textarea {
   font: 600 18px Nunito, sans-serif;
+}
+
+body {
+  --color-primary: linear-gradient(329.54deg, #29B6D1 0%, #00C7C7 100%);
+  --color-default-background: #EBF2F5; 
+  --color-card-content: #5C8599;
+  --color-card-background: #FFF;
+  --color-card-border: #D3E2E5;
+
+  --color-card-hour: linear-gradient(149.97deg, #E6F7FB 8.13%, #FFFFFF 92.67%);
+
+  --color-map-container:  #E6F7FB;
+
+  --color-card-background-weekends: linear-gradient(154.16deg, #EDFFF6 7.85%, #FFFFFF 91.03%);
+  --color-card-border-weekends: #A1E9C5;
+  --color-card-weekends: #37C77F;
+
+  --color-card-background-weekends-dont-open: linear-gradient(154.16deg, #FDF0F5 7.85%, #FFFFFF 91.03%);
+  --color-card-border-weekends-dont-open: #FFBCD4;
+  --color-card-weekends-dont-open: #FF669D;
+  
+  --color-secondary: #15C3D6;
+  --color-secondary-hover: #17D6EB;
+  --color-background-leaflet: rgba(255, 255, 255, 0.8);
+  --color-leaflet: #0089A5;
+}
+body.dark {
+  --color-primary: #2A212C;
+  --color-default-background: #322c35; 
+  --color-card-content: #FFF;
+  --color-card-border: #000;
+
+  --color-card-hour: #202020;
+
+  --color-card-background-weekends: rgb(34, 34, 34);
+  --color-card-border-weekends: #8AFF80;
+  --color-card-weekends: #37C77F;
+
+  --color-card-background-weekends-dont-open: #3a3a3a;
+  --color-card-border-weekends-dont-open: #494949;
+  --color-card-weekends-dont-open: #FF669D;
+  
+  --color-card-background: #2b222c;
+  --color-secondary: #544158;
+  --color-secondary-hover: #9580FF;
+  --color-background-leaflet: #979797;
+  --color-leaflet: #FFF;
 }
