@@ -3,6 +3,7 @@ import { Map, Marker, TileLayer } from 'react-leaflet';
 import { FiPlus } from "react-icons/fi";
 import { LeafletMouseEvent } from 'leaflet';
 import { useHistory } from 'react-router-dom';
+import InputMask from 'react-input-mask';
 
 import Sidebar from "../components/Sidebar";
 import mapIcon from "../utils/mapIcon";
@@ -19,6 +20,7 @@ export default function CreateOrphanage() {
   const [instructions, setInstructions] = useState('');
   const [opening_hours, setOpeningHours] = useState('');
   const [open_on_weekends, setOpenOnWeekends] = useState(true);
+  const [phone, setPhone] = useState('');
   const [images, setImages] = useState<File[]>([]);
   const [previewImages, setPreviewImages] = useState<string[]>([]);
 
@@ -45,6 +47,13 @@ export default function CreateOrphanage() {
     setPreviewImages(selectedImagesPreview);
   }
 
+  function handleInputPhone(event: ChangeEvent<HTMLInputElement>) {
+    const phoneInput = event.target.value;
+
+    const phoneNumber = phoneInput.replace(/\D+/g, '');
+    setPhone(phoneNumber);
+  }
+
   function handleSubmit(event: FormEvent) {
     event.preventDefault();
 
@@ -54,6 +63,7 @@ export default function CreateOrphanage() {
 
     data.append('name', name);
     data.append('about', about);
+    data.append('phone', phone);
     data.append('latitude', String(latitude));
     data.append('longitude', String(longitude));
     data.append('instructions', instructions);
@@ -109,6 +119,15 @@ export default function CreateOrphanage() {
                 id="name" 
                 value={name} 
                 onChange={event => setName(event.target.value)}
+              />
+            </div>
+            <div className="input-block">
+            <label htmlFor="phone">Telefone (Whatsapp)</label>
+              <InputMask 
+                id="phone"
+                mask="(99) 9 9999-9999"
+                onChange={handleInputPhone}
+                value={phone}
               />
             </div>
 
